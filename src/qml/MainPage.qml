@@ -244,7 +244,7 @@ JewelPage {
                 text: "Help"
                 buttonImage: "qrc:///images/icon_help.png"
                 pressedButtonImage: "qrc:///images/icon_help_pressed.png"
-                onClicked: { mainMenu.hide(); openFile("HelpPage.qml") }
+                onClicked: { mainMenu.hide(); gameview.showHelpPage(); }
                 /* For testing levels... */
 //                onClicked: { mainMenu.hide(); Jewels.nextLevel() }
             }
@@ -252,7 +252,7 @@ JewelPage {
                 text: "About"
                 buttonImage: "qrc:///images/icon_about.png"
                 pressedButtonImage: "qrc:///images/icon_about_pressed.png"
-                onClicked: { mainMenu.hide(); openFile("qrc:///qml/AboutPage.qml") }
+                onClicked: { mainMenu.hide(); gameview.showAboutPage(); }
                 /* For testing levels... */
 //                onClicked: { mainMenu.hide(); Jewels.prevLevel() }
                 /* For testing dialogs */

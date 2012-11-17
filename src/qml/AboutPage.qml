@@ -21,20 +21,18 @@ import QtQuick 1.0
 
 import "qrc:///js/constants.js" as Constants
 
-FullPage {
-    id: mainPage
-    Flickable {
-        id: flickList
-        anchors { top: parent.top; 
-                  left: parent.left; right: parent.right }
-        height: parent.height-99
-        clip: true
-        flickableDirection: Flickable.VerticalFlick
-        contentWidth: parent.width
-        contentHeight: logoImage.height + versionText.paintedHeight +
-        cred1Text.paintedHeight + cred2Text.paintedHeight +
-        copyrightText.paintedHeight + gplText.paintedHeight + 30*8
+Rectangle {
+    id: aboutPage
+        width: 768
+        height: 1280
         
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+            gameview.hideAboutPage();
+            }
+        }
+                
         Image {
             id: logoImage
             source: "qrc:///images/heebo_logo.png";
@@ -70,9 +68,16 @@ FullPage {
         }
 
         FullPageText {
+            id: cred3Text
+            text: Constants.heebo_credit_porting
+
+            anchors.top: cred2Text.bottom
+            horizontalAlignment: Text.AlignHCenter
+        }
+        FullPageText {
             id: copyrightText
             text: Constants.heebo_copyright
-            anchors.top: cred2Text.bottom
+            anchors.top: cred3Text.bottom
             anchors.topMargin: 50
         }
 
@@ -82,8 +87,4 @@ FullPage {
             style: "small"
             anchors.top: copyrightText.bottom
         }
-    }
-    ScrollBar {
-        flickableItem: flickList
-    }
 }

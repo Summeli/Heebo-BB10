@@ -95,7 +95,8 @@ var heebo_description =
     "Simple and addictive Match 3 game with quirky characters.";
 var heebo_copyright
     = "Copyright 2012 &copy; Mats Sjöberg, Niklas Gustafsson<br/><br/>"+
-"All the source code and game level maps for Heebo are licensed under GPLv3. All graphics are licensed under CC-BY-SA.<br/><br/>The source code can be downloaded from <a style=\"color: "+color_uiaccent+"\" href=\"http://gitorious.org/heebo\">http://gitorious.org/heebo</a><br/><br/>";
+"All the source code and game level maps for Heebo are licensed under GPLv3. All graphics are licensed under CC-BY-SA.<br/><br/>The source code can be downloaded from <a style=\"color: "+color_uiaccent+"\" href=\"http://gitorious.org/heebo\">http://gitorious.org/heebo</a><br/><br/>"+
+"The BlackBerry 10 port code can be downloaded from <a style=\"color: "+color_uiaccent+"\" href=\"http://github.com/Summeli/Heebo\">http://github.com/Summeli/Heebo</a><br/><br/>";
 
 var code_license =
     "This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.<br/><br/>"+
@@ -106,8 +107,9 @@ var graphics_license = "All graphics in Heebo are licensed under the <a style=\"
 
 var heebo_credit_coding = "<i>Cöde</i><br\><b>Mats Sj&ouml;berg</b><br\>mats@sjoberg.fi<br/><a style=\"color: "+color_uiaccent+"\" href=\"http://www.sjoberg.fi/mats/\">www.sjoberg.fi/mats</a>";
 
-
 var heebo_credit_graphics = "<i>Gräphix</i><br\><b>Niklas Gustafsson</b><br\>nikui@nikui.net<br/><a style=\"color: "+color_uiaccent+"\" href=\"http://www.nikui.net/\">www.nikui.net</a>";
+
+var heebo_credit_porting = "<i>BB10 Porting</i><br\><b>Antti Pohjola</b><br\>summeli@summeli.fi<br/><a style=\"color: "+color_uiaccent+"\" href=\"http://www.summeli.fi/\">http://www.summeli.fi</a>";
 
 //-----------------------------------------------------------------------------
 // Help

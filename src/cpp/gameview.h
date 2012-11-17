@@ -36,6 +36,10 @@ public slots:
   QString platform() const;
   void onLevelChanged();
   void quitApp();
+  void hideAboutPage();
+  void showAboutPage();
+  void hideHelpPage();
+  void showHelpPage();
 
 private:
   void writeSettings();
@@ -43,6 +47,9 @@ private:
 
   GameMapSet* m_mapset;
   int m_level;
+
+  QDeclarativeView* aboutView;
+  QDeclarativeView* helpView;
 };
 
 #endif /* _GAMEVIEW_H_ */

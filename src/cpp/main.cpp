@@ -1,18 +1,11 @@
 // Default empty project template
-#include <bb/cascades/Application>
-#include <bb/cascades/QmlDocument>
-#include <bb/cascades/AbstractPane>
 
-#include <QLocale>
-#include <QTranslator>
+#include <QtGui/QApplication>
 #include "gameview.h"
 
-using namespace bb::cascades;
-
-int main(int argc, char **argv)
-{
+Q_DECL_EXPORT int main(int argc, char** argv) {
     QApplication app(argc, argv);
-
+    
     GameView view;
 #ifdef HARMATTAN
     view.showFullScreen();

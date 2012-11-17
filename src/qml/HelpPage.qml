@@ -21,23 +21,17 @@ import QtQuick 1.0
 
 import "../js/constants.js" as Constants
 
-FullPage {
-    id: mainPage
+Rectangle {
+    id: aboutPage
+    width: 768
+    height: 1280
 
-    Flickable {
-        id: flickList
-        anchors { top: parent.top; 
-                  left: parent.left; right: parent.right }
-        height: parent.height-99
-        clip: true
-        flickableDirection: Flickable.VerticalFlick
-        contentWidth: parent.width
-        contentHeight: titleText.paintedHeight +
-                       help_topic_1.paintedHeight + help_text_1.paintedHeight +
-                       help_topic_2.paintedHeight + help_text_2.paintedHeight +
-                       help_topic_3.paintedHeight + help_text_3.paintedHeight +
-                       help_topic_4.paintedHeight + help_text_4.paintedHeight +
-                       help_text_5.paintedHeight + 30*11
+        MouseArea {
+            anchors.fill: parent
+            onClicked: {
+            gameview.hideHelpPage();
+            }
+        }
         
         FullPageText {
             id: titleText
@@ -105,9 +99,5 @@ FullPage {
             style: "emphasis"
             anchors.top: help_text_4.bottom
         }
-    }
-    ScrollBar {
-        flickableItem: flickList
-    }
 
 }

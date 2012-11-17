@@ -34,6 +34,15 @@ GameView::GameView(QWidget* parent) : QDeclarativeView(parent) {
   rootContext()->setContextProperty("gameview", this);
 
   setSource(QUrl("qrc:///qml/main.qml"));
+  aboutView =  new QDeclarativeView();
+  aboutView->hide();
+  aboutView->setSource(QUrl("qrc:///qml/AboutPage.qml"));
+  aboutView->rootContext()->setContextProperty("gameview", this);
+
+  helpView = new QDeclarativeView();
+  helpView->hide();
+  helpView->setSource(QUrl("qrc:///qml/HelpPage.qml"));
+  helpView->rootContext()->setContextProperty("gameview", this);
 }
 
 //------------------------------------------------------------------------------
@@ -71,6 +80,24 @@ void GameView::readSettings() {
 }
 
 //------------------------------------------------------------------------------
+
+void GameView::hideAboutPage(){
+	aboutView->hide();
+	showFullScreen();
+}
+void GameView::showAboutPage(){
+	hide();
+	aboutView->showFullScreen();
+}
+
+void GameView:: hideHelpPage(){
+	helpView->hide();
+	showFullScreen();
+}
+void GameView::showHelpPage(){
+	hide();
+	helpView->showFullScreen();
+}
 
 void GameView::quitApp() {
   writeSettings();

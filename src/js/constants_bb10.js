@@ -5,11 +5,11 @@
 //-----------------------------------------------------------------------------
 
 // Block pixel size
-var block_width  = 130;
-var block_height = 130;
+var block_width  = 70;
+var block_height = 70;
 
 // height of toolbar
-var toolbar_height = 110;
+var toolbar_height = 90;
 
 var tool_bar_left_margin = 135;
 var level_margin_1digit_offset = 10;

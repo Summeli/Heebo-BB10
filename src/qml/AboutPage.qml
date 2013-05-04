@@ -21,10 +21,11 @@ import QtQuick 1.0
 
 import "qrc:///js/constants.js" as Constants
 
-Rectangle {
+Flickable {
     id: aboutPage
-        width: 768
-        height: 1280
+        width: 720
+        height: 720
+        contentHeight: 1300
         
         MouseArea {
             anchors.fill: parent

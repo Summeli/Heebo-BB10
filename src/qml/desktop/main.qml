@@ -18,28 +18,12 @@
 */
 
 import QtQuick 1.0
-import bb.cascades 1.0
 
 import "qrc:///js/constants.js" as Constants
 import "qrc:///js/constants_platform.js" as ConstantsP
-
-NavigationPane  {
-    id: pageStack
-/* AboutPage { */
-/* HelpPage { */
 
     MainPage {
         id: mainPage
         anchors.fill: parent
     }
-    
-    onCreationCompleted: {
-        // this slot is called when declarative scene is created
-        // write post creation initialization here
-        console.log("NavigationPane - onCreationCompleted()");
 
-        // enable layout to adapt to the device rotation
-        // don't forget to enable screen rotation in bar-bescriptor.xml (Application->Orientation->Auto-orient)
-        OrientationSupport.supportedDisplayOrientation = SupportedDisplayOrientation.All;
-    }
-}

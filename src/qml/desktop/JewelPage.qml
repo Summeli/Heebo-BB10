@@ -19,7 +19,13 @@
 
 import QtQuick 1.0
 
-Page {
+Rectangle {
+    width: 720
+    height: 720
     SystemPalette { id: activePalette }
-    color: activePalette.window
+    
+    gradient: Gradient {
+        GradientStop { position: 0.0; color: "#0C0C0C" }
+        GradientStop { position: 1.0; color: "#242424" }
+    }
 }

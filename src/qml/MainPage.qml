@@ -62,8 +62,8 @@ JewelPage {
     Item {
         id: background;
         width: parent.width
-        anchors { top: parent.top; bottom: toolBar.top }
-
+        anchors { top: parent.top; bottom: toolBar.top; left: parent.left; leftMargin: 150}
+		
         MouseArea {
             anchors.fill: parent
             onPressed: Jewels.mousePressed(mouse.x, mouse.y)
